@@ -1,0 +1,250 @@
+{
+   "AWSTemplateFormatVersion": "2010-09-09",
+   "Description": "CloudFront distribution with an S3 origin for hosting images for blog.rossedfort.com",
+   "Parameters": {},
+   "Resources": {
+      "CFLogBucket": {
+         "DeletionPolicy": "Delete",
+         "Metadata": {
+            "Comment": {
+               "Fn::Sub": [
+                  "${Comment}. Created by stack ${Stack}",
+                  {
+                     "Comment": "To store logs for requests to the CloudFront distribution",
+                     "Stack": {"Ref": "AWS::StackName"}
+                  }
+               ]
+            }
+         },
+         "Properties": {
+            "AccessControl": "LogDeliveryWrite",
+            "BucketName": "blog.rossedfort.com-cf-logs"
+         },
+         "Type": "AWS::S3::Bucket"
+      },
+      "S3LogBucket": {
+         "DeletionPolicy": "Delete",
+         "Metadata": {
+            "Comment": {
+               "Fn::Sub": [
+                  "${Comment}. Created by stack ${Stack}",
+                  {
+                     "Comment": "To store logs for requests to the S3 Bucket",
+                     "Stack": {"Ref": "AWS::StackName"}
+                  }
+               ]
+            }
+         },
+         "Properties": {
+            "AccessControl": "LogDeliveryWrite",
+            "BucketName": "blog.rossedfort.com-s3-logs"
+         },
+         "Type": "AWS::S3::Bucket"
+      },
+      "ImageBucket": {
+         "DeletionPolicy": "Delete",
+         "Metadata": {
+            "Comment": {
+               "Fn::Sub": [
+                  "${Comment}. Created by stack ${Stack}",
+                  {
+                     "Comment": "To store images for use on blog.rossedfort.com",
+                     "Stack": {"Ref": "AWS::StackName"}
+                  }
+               ]
+            }
+         },
+         "Properties": {
+            "AccessControl": "Private",
+            "BucketName": "blog.rossedfort.com",
+            "LoggingConfiguration": {
+               "DestinationBucketName": {
+                  "Ref": "S3LogBucket"
+               }
+            }
+         },
+         "Type": "AWS::S3::Bucket"
+      },
+      "ImageBucketPolicy": {
+         "Metadata": {
+            "Comment": {
+               "Fn::Sub": [
+                  "${Comment}. Created by stack ${Stack}",
+                  {
+                     "Comment": "To allow the CloudFront distribution access to the objects in S3",
+                     "Stack": {"Ref": "AWS::StackName"}
+                  }
+               ]
+            }
+         },
+         "Properties": {
+            "Bucket": {
+               "Ref": "ImageBucket"
+            },
+            "PolicyDocument": {
+               "Statement": [
+                  {
+                     "Action": [
+                        "s3:GetObject"
+                     ],
+                     "Effect": "Allow",
+                     "Principal": {
+                        "CanonicalUser": {
+                           "Fn::GetAtt": [
+                              "CFOriginAccessIdentity",
+                              "S3CanonicalUserId"
+                           ]
+                        }
+                     },
+                     "Resource": {
+                        "Fn::Sub": [
+                           "arn:aws:s3:::${Bucket}/*",
+                           {
+                              "Bucket": {
+                                 "Ref": "ImageBucket"
+                              }
+                           }
+                        ]
+                     }
+                  }
+               ]
+            }
+         },
+         "Type": "AWS::S3::BucketPolicy"
+      },
+      "CFDistribution": {
+         "Metadata": {
+            "Comment": {
+               "Fn::Sub": [
+                  "${Comment}. Created by stack ${Stack}",
+                  {
+                     "Comment": "Cache layer for the objects in S3",
+                     "Stack": {"Ref": "AWS::StackName"}
+                  }
+               ]
+            }
+         },
+         "Properties": {
+            "DistributionConfig": {
+               "Comment": {
+                  "Fn::Sub": [
+                     "${Comment}. Created by stack ${Stack}",
+                     {
+                        "Comment": "Config for CloudFront Distribution",
+                        "Stack": {"Ref": "AWS::StackName"}
+                     }
+                  ]
+               },
+               "DefaultCacheBehavior": {
+                  "AllowedMethods": [
+                     "HEAD",
+                     "GET"
+                  ],
+                  "CachedMethods": [
+                     "HEAD",
+                     "GET"
+                  ],
+                  "Compress": false,
+                  "DefaultTTL": 86400,
+                  "ForwardedValues": {
+                     "Cookies": {
+                        "Forward": "none"
+                     },
+                     "Headers": [
+                        "Origin"
+                     ],
+                     "QueryString": false
+                  },
+                  "MaxTTL": 31536000,
+                  "MinTTL": 86400,
+                  "TargetOriginId": {
+                     "Fn::Sub": [
+                        "s3-origin-${Bucket}",
+                        {
+                           "Bucket": {
+                              "Ref": "ImageBucket"
+                           }
+                        }
+                     ]
+                  },
+                  "ViewerProtocolPolicy": "redirect-to-https"
+               },
+               "DefaultRootObject": "index.html",
+               "Enabled": true,
+               "HttpVersion": "http2",
+               "IPV6Enabled": false,
+               "Origins": [
+                  {
+                     "DomainName": {
+                        "Fn::GetAtt": [
+                           "ImageBucket",
+                           "DomainName"
+                        ]
+                     },
+                     "Id": {
+                        "Fn::Sub": [
+                           "s3-origin-${Bucket}",
+                           {
+                              "Bucket": {
+                                 "Ref": "ImageBucket"
+                              }
+                           }
+                        ]
+                     },
+                     "OriginPath": "",
+                     "S3OriginConfig": {
+                        "OriginAccessIdentity": {
+                           "Fn::Sub": [
+                              "origin-access-identity/cloudfront/${Identity}",
+                              {
+                                 "Identity": {
+                                    "Ref": "CFOriginAccessIdentity"
+                                 }
+                              }
+                           ]
+                        }
+                     }
+                  }
+               ],
+               "PriceClass": "PriceClass_100",
+               "Logging": {
+                  "Bucket": {
+                     "Fn::GetAtt": [
+                        "CFLogBucket",
+                        "DomainName"
+                     ]
+                  }
+               }
+            }
+         },
+         "Type": "AWS::CloudFront::Distribution"
+      },
+      "CFOriginAccessIdentity": {
+         "Metadata": {
+            "Comment": {
+               "Fn::Sub": [
+                  "${Comment}. Created by stack ${Stack}",
+                  {
+                     "Comment": "Access S3 bucket objects only through CloudFront",
+                     "Stack": {"Ref": "AWS::StackName"}
+                  }
+               ]
+            }
+         },
+         "Properties": {
+            "CloudFrontOriginAccessIdentityConfig": {
+               "Comment": {
+                  "Fn::Sub": [
+                     "${Comment}. Created by stack ${Stack}",
+                     {
+                        "Comment": "Access S3 bucket objects only through CloudFront",
+                        "Stack": {"Ref": "AWS::StackName"}
+                     }
+                  ]
+               }
+            }
+         },
+         "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity"
+      }
+   }
+}

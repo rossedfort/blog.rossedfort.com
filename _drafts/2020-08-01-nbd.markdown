@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "NBD - New Bike Day (Belated)"
+date:   2020-08-01 11:30:00 -0600
+tags: cycling
+---
+One thing that's bothered me during COVID is that I am not able to commute into the office. Yes, you read that correctly. I miss my commute, and I consider myself lucky to be able to say that.
+
+Since spring of 2017, I've been commuting to work via bike almost exclusively, with the only exception being days where there is too much snow on the ground. The ride is about 3.5 miles each way, and since I've been working remotely full time since the middle of March, I've missed this part of my day.
+
+The way I decided to solve this was as any other sane person would do; buy a new bike.
+
+In May, I bought a new Salsa Warroad Carbon Apex 1. The name is a bit confusing, so I'll break it down. Salsa is the company that makes the bike. Warroad refers to the model of the frame. It's Carbon Fiber, which makes it light and speedy, and is true to Salsa's M.O. of adding mount points all over the place. They market it as an "Endurance All-Road / Road Without Limits / Hero Gravel" bike, meaning it's perfect for long rides on pavement, but capable of going off-road as well. Apex 1 refers to the type of componentry that's on the bike; think crankset, brake levers, shifters, etc.
+
+What I really like about this bike is that the frame and fork accomodate 700C wheels with tires up to 35mm wide, and 650B wheels with tires up to 47mm wide. Meaning I can run skinny road tires or fat gravel tires all on the same bike. I also like that this build is what's referred to as a "1x" or "1-by" , meaning it only has 1 gear on the crankset, whereas many road bikes have 2 or 3 gears on the crankset. This means that although I compromise on top-speed, I don't have to worry about an additional shifter and derailleur.
+
+Pictured below with 700C x 37mm WTB Riddler tires.
+
+![nbd](https://d24cjeqog2pfe4.cloudfront.net/08-01-2020-nbd/bike_001.jpeg)
+
+I've done some longer rides with this bike already, one of which took me down the Cherry Creek Trail, and around Cherry Creek State Park.
+
+<iframe style="display: block; margin: 0 auto;" height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/3510494951/embed/97e5b6e8cfb3941eea4268ad00ddf6edd6835346'></iframe>
+
+I look forward to riding more, and even getting out to mountains for some gravel riding and bikepacking.
