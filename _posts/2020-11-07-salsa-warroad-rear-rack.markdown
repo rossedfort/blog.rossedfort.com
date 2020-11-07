@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "Fitting a Rear Rack on a 2020 Salsa Warroad Carbon"
+date:   2020-11-07 10:00:00 -0700
+tags: cycling rear rack panniers salsa warroad carbon
+---
+# Motivation
+Recently I planned a trial bikepacking trip with my good friend Nate. We both wanted to try bikepacking without getting completely invested, so in lieu of buying single purpose bikepacking [bags](https://bikepacking.com/plan/tips/guide-to-bikepacking-bags/), I opted to go with a rack and panniers. This way, if I determined bikepacking was not for me, I could always use them for commuting and running errands around town, and likely even use them interchangeably between bikes. This is my experience trying to fit a rear rack on a Carbon Fiber 2020 Salsa Warroad.
+
+# No Rack Mount Points on the Warroad's Seat Stays
+When I bought the Salsa Warroad, I hadn't really considered that I would want to mount a rack on it. Soon after deciding that I did, I came to realize that the Warroad doesn't have mount points on the rear seat stays. These are the points on the bike where the rack's struts are secured to the frame. I found this surprsing, due to the fact that the Warroad has six, yes _six_ 2-bolt water bottle cage mounts, including one on each side of the fork, and even one on the underside of the down tube. Apparently Salsa thinks I need half a dozen water bottles, but not a rear rack. Anyway, the lack of seat stay mount points meant that I needed to find an alternative method to mount a rear rack. Thankfully, Salsa had considered this alternative.
+
+Salsa makes products that are specifically designed for mounting racks on bike frames without seat stay mount points. They are the [Rack-Lock](https://salsacycles.com/components/category/collars/rack-lock), and the [Post-Lock](https://salsacycles.com/components/category/collars/post-lock). Both provide mount points allowing you to attach a rack's struts to your frame, however The Rack-Lock doubles as a seat collar whereas the Post-Lock does not. This means you can mount the Rack-Lock on your seat _tube_ (in place of a traditional seat collar) and not only does it add mount points for your rack's struts, it also holds your seatpost in place. The Post-Lock does _not_ act as a seat collar. It is meant to be secured around your seat*post* (in addition to a traditional seat collar) and should _not_ be used to hold your seatpost in place. Both are good options, but I preferred to use the more functional Rack-Lock. Unfortunately, every local bike shop in Denver, and every major online retailer did not have the Rack-Lock in stock in the size I needed. I contacted Salsa support, and they informed that they would not be producing more until late Fall 2020, or even 2021. This drove me to search for off-brand reproductions of the Rack-Lock, which is where my second problem arose.
+
+# A Carbon Fiber Frame with Bespoke Measurements
+Carbon Fiber has the benefit of being both incredibly light and strong, however it's easy to damage, crack, or otherwise weaken your frame by using parts that aren't the right size, or by tightening properly sized parts too much. This meant that if I wanted to find an off-brand replacement for Salsa's Rack-Lock, I needed to find one whose inner diameter matched the exact external diameter of my seat tube. I assumed it wouldn't be too difficult, given that many bike frames and parts are meant to be universal or at least somewhat interchangeable, however I was wrong. Finding an off-brand Rack-Lock for a 32mm seat tube proved impossible. A 32mm seat tube diameter is apparently unique to Salsa bikes, as told to me by a friendly employee of [Pedal](https://www.pedalonline.com/) in Littleton, CO. That meant that by purchasing a product like [this](https://www.amazon.com/M-Wave-Seatpost-Clamp-Rack-Mounts/dp/B0775L5KTZ), with a inner diameter of 31.8mm, I would risk causing damage to my frame. I can only assume that this is a sales strategy by Salsa, so that once you purchase a Salsa bike, you are limited to purchasing mainly Salsa parts and accessories. 
+
+At this point, I was nearly out of options, however luckily, I was able find a 27.2mm Post-Lock (To match the size of my seat*post*) at [trekbicyclesuperstore.com](https://www.trekbicyclesuperstore.com/). This was not the ideal solution, but ended up being my best option given my time crunch. It's also worth noting that a Salsa does not recommend using a Post-Lock on a Carbon Fiber seatpost. Luckily, my Warroad has a seatpost with an aluminum shaft.
+
+# Getting a Rack
+There are hundreds, if not thousands of options when it comes to rear racks, however, after the hastle of trying to find an off-brand Rack-Lock that was compatible with my bike, I opted to shell out the extra money for one of Salsa's racks, assuming that I'd be paying for the peace of mind that the rack would fit seamlessly on my bike. Well, turns out I was wrong. I bought the [Salsa Wanderlust](https://salsacycles.com/components/category/racks/wanderlust_rack), which is the rack Salsa recommends if you have a Warrorad. Thankfully, my local Denver REI had them in stock, so I ordered online for curbside pickup. When I got home, I immediately tried installing the rack. To my dismay, but somewhat unsurprisingly, it didn't fit properly. Specifically, the straight struts that came with the rack didn't simultaneously clear the underside of the rack and reach the mount on the seatpost.
+
+When I ordered the rack from REI, I noticed that the rack was advertised to come with both straight and bent struts. The bent struts had a 45º angle, and were what I needed to solve my clearance problem, yet they weren't in the box. I contacted REI support, and after some back-and-forth explaining the issue, they claimed it was a shipping error, and that they would send me a rack with both sets of struts right away. I wasn't optimistic, but I waited patiently for the new shipment to arrive. Sure enough, upon unboxing the new rack from REI, it didn't contain the correct struts. I reached out to REI yet again, and informed them that they had falsely advertised the rack. They refunded me 20% off my initial order, which thankfully was enough to cover the cost of purchasing the bent struts individually. Now where to find them in the midst of a global pandemic that's caused countless disruptions in the supply chain?
+
+Similarly to my search for the Post-Lock, I scoured the internet searching for a set of Salsa's [bent struts](https://salsacycles.com/components/category/rack_hardware/bent_rack_struts_45_degree_8mm). Lucikly, I found some at [campfirecycling.com](https://www.campfirecycling.com/), a brick and mortar bike shop in Tuscon, Arizona, that also sells online. I secured the struts, and _finally_ had a functioning rear rack setup for my bike. 
+
+# What I Learned
+Well, I learned that Salsa likes to keep you in their family of products, I learned that they don't have much information by way of tutorials showing cyclists how to install a rack on each of their bikes, and I learned that acquiring bike parts in the midst of a global pandemic where everyone is searching for new ways to be active is a real challenge. I write this blog post in hopes that it will help someone down the road who is fruitlessly searching for information on how to mount a rack on their Salsa bike.
+
+# Final Parts List
+- [2020 Salsa Warroad Carbon - Apex 1](https://salsacycles.com/bikes/warroad/2020_warroad_carbon_apex_1_700)
+- [Salsa Post-Lock - 27.2mm](https://salsacycles.com/components/category/collars/post-lock)
+- [Salsa Wanderlust Rack](https://salsacycles.com/components/category/racks/wanderlust_rack)
+- [Salsa Bent Struts - 45º/8mm](https://salsacycles.com/components/category/rack_hardware/bent_rack_struts_45_degree_8mm)
+
+# Some Photos of the Final Setup
+![2020 Salsa Warroad with Rack & Panniers](https://d24cjeqog2pfe4.cloudfront.net/bike_rack_001.jpg)
+
+![2020 Salsa Warroad with Rack & Panniers](https://d24cjeqog2pfe4.cloudfront.net/bike_rack_002.jpg)
+
+![2020 Salsa Warroad with Rack & Panniers](https://d24cjeqog2pfe4.cloudfront.net/bike_rack_003.jpg)
